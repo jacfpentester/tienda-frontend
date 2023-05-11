@@ -19,7 +19,7 @@ export const ProductosCard:FC<Props> = ({ producto }) => {
                         sx={{ width: '120px', height: '160px', objectFit: 'cover' }}
                     />
                     <Box sx={{marginLeft: 3}}>
-                        <Typography fontWeight={1000}>Titulo:</Typography> 
+                        <Typography fontWeight={1000}>Nombre:</Typography> 
                         <Typography fontWeight={700}>{producto.Nombre}</Typography>
                         <Typography fontWeight={1000}>Precio:</Typography> 
                         <Typography fontWeight={700}>{producto.Precio} €</Typography> 

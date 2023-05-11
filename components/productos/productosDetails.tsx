@@ -14,7 +14,7 @@ interface Props {
 }
 
 
-const myLoader:ImageLoader = ({src, width, quality}) =>{
+const myLoader:ImageLoader = ({src, width}) =>{
   return `${src}?s=${width}`
 }
 export const ProductosDetails:FC<Props> = ({producto}) => {
@@ -32,7 +32,7 @@ export const ProductosDetails:FC<Props> = ({producto}) => {
       <Grid item xs={12} sm={12} sx={{ border:0, width:'100%' }} >
         <Box display='flex' flexDirection='row'  >
           <Image
-            loader={myLoader}
+            //loader={myLoader}
             src= {producto.Imagen}
             alt={producto.Nombre}
             width={300}

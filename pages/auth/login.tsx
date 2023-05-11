@@ -33,12 +33,12 @@ const LoginPage = () => {
         }
         //navegar a pantalla en la que estaba el usuario
         // router.push('/');
-        router.replace('/');
+        router.replace('/productos');
     } 
     return (
         <AuthLayout title={'Ingresar'}>
             <form onSubmit={ handleSubmit(onLoginUser) } noValidate>
-                <Box className="register-page" sx={{ width: 350, padding: '10px 20px'}}>
+                <Box sx={{ width: 350, padding: '10px 20px'}}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Typography variant='h3' component='h3'>Iniciar Sesión</Typography>
@@ -53,7 +53,7 @@ const LoginPage = () => {
                         <Grid item xs={12}>
                             <TextField 
                                 { ...register('Email', {
-                                    required: 'Email requerido',
+                                    required: 'email es obligatorio',
                                     validate: (val) => validations.isEmail(val)
                                     // validate: validations.isEmail
                                 })}
@@ -64,12 +64,12 @@ const LoginPage = () => {
                         <Grid item xs={12}>
                             <TextField 
                                 { ...register('Password', {
-                                    required:'Password requerido',
-                                    minLength: { value: 6, message: 'Minimo 8 caracteres'}
+                                    required:'Password es requerido',
+                                    minLength: { value: 6, message: 'Minimo 6 caracteres'}
                                 })}
                                 error={!!errors.Password}
                                 helperText={errors.Password?.message}
-                                label="Password" type="password" variant='filled' fullWidth />
+                                label="Contraseña" type="password" variant='filled' fullWidth />
                             <TextField
                                  sx={{ display: showError ? 'flex': 'none'}}
                                 //  value =  {...register('totken') }
