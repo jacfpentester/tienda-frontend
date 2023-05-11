@@ -1,0 +1,40 @@
+h1 {
+  color: rgb(0, 0, 0)
+}
+header {
+  height: 70px;
+  /* background-color: blue; */
+}
+
+main{
+  height: auto;
+  background-image: url('/public/inicio.png');
+  background-size: cover;
+  /* background-color: rgb(244, 220, 85); */
+  color: rgb(0, 0, 0)
+}
+
+footer {
+  height: 70px;
+  background-color: rgb(126, 35, 35);
+}
+
+.register-page {
+  background-color: rgb(126, 35, 35);
+  /* background-image: url(/rojo.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+
+.card-background {
+  background-color: rgb(126, 35, 35);
+  background-size: cover;
+}
+
+.grid-background {
+  /* background-color: rgb(126, 35, 35); */
+  background-image: url(/detalle.png);
+  background-size: cover;
+}
+
+
