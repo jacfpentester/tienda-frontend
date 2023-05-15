@@ -65,14 +65,14 @@ const LoginPage = () => {
                             <TextField 
                                 { ...register('Password', {
                                     required:'Password es requerido',
-                                    minLength: { value: 6, message: 'Minimo 6 caracteres'}
+                                    minLength: { value: 8, message: 'Minimo 8 caracteres'}
                                 })}
                                 error={!!errors.Password}
                                 helperText={errors.Password?.message}
                                 label="Contraseña" type="password" variant='filled' fullWidth />
                             <TextField
                                  sx={{ display: showError ? 'flex': 'none'}}
-                                //  value =  {...register('totken') }
+                                //  value =  {...register('token') }
                             />
                                     
                          
