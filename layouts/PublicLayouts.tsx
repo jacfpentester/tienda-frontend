@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { FC } from 'react'
-import { NavBar } from '../components/commons/'
+import { ResponsiveAppBar } from '../components/commons'
 
 interface Props {
     children: any;
@@ -9,7 +9,7 @@ export const PublicLayouts:FC<Props> = ({ children }) => {
   return (
     <>
         <header>
-            <NavBar/>
+            <ResponsiveAppBar/>
         </header>
         <main style={{
             margin: '20px auto',

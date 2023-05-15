@@ -14,7 +14,7 @@ interface Props {
 }
 
 
-const myLoader:ImageLoader = ({src, width}) =>{
+const myLoader:ImageLoader = ({src, width, quality}) =>{
   return `${src}?s=${width}`
 }
 export const ProductosDetails:FC<Props> = ({producto}) => {
@@ -72,9 +72,8 @@ export const ProductosDetails:FC<Props> = ({producto}) => {
               </TabList>
             </Box>
             <TabPanel value="1">{producto.Descripcion}</TabPanel>
-            <TabPanel value="2">{producto.proveedores?.ID}</TabPanel>
-            <TabPanel value="2">Por... {producto.proveedores?.ClienteID}</TabPanel>
-            <TabPanel value="3">{producto.categoria?.ID}</TabPanel>
+            <TabPanel value="2">{producto.proveedores?.Nombre}</TabPanel>
+            <TabPanel value="3">{producto.categoria?.Nombre}</TabPanel>
           </TabContext>
         </Box>
         {/* <Box sx={{ width: '100%' }}>

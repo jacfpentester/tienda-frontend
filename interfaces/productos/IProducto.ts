@@ -5,19 +5,19 @@ export interface IProducto {
     Nombre: string;
     Descripcion: string;
     Precio: number;
-    CategoriaID: string;
-    ProveedorID: string;
+  //  CategoriaID: string;
+  //  ProveedorID: string;
     Imagen: string;
     categoria: ICategorias
     proveedores: IProveedores
 }
 export interface ICategorias {
     ID: string;
-    Genero: string;
+    Nombre: string;
 }
 export interface IProveedores {
     ID: string;
-    ClienteID: string;
+   // ClienteID: string;
     NIF: string;
     Nombre: string;
 }
