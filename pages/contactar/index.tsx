@@ -7,12 +7,10 @@ const IndexPage: NextPage = () => {
 
   return (
     <PublicLayouts>
-      <h2>SECCIÓN HOME - Tienda</h2>
-      <img src="inicio.jpg" width="800"
-     height="800"></img>
+      <h2>SECCIÓN CONTACTAR</h2>
+      Telefono:950678675
     </PublicLayouts>
   )
 }
 
 export default IndexPage
-

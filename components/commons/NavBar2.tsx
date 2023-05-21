@@ -12,9 +12,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Link from 'next/link';
 
-const pages = ['productos', 'clientes'];
-const settings = ['Acceder', 'Registro'];
+const pages = [
+  {label: 'PRODUCTOS', path: '/productos'},
+  {label: 'CONTACTAR',  path: '/contactar'},
+];
+
+const settings = [
+  {label: 'ACCEDER', path: '/auth/login'},
+  {label: 'REGISTRO',  path: '/auth/registro'},
+];
 
 export function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -88,9 +96,22 @@ export function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
-                  
-                  <Typography textAlign="center" >{page}</Typography>
+                <MenuItem key={page.path} onClick={handleCloseNavMenu} > 
+                  <Typography 
+                    textAlign="center"
+                    component="a"
+                    href={page.path}
+                    sx={{
+                      mr: 2,
+                      display: { xs: 'flex', md: 'none' },
+                      flexGrow: 1,
+                      fontFamily: 'monospace',
+                      fontWeight: 700,
+                      letterSpacing: '.3rem',
+                      color: 'inherit',
+                      textDecoration: 'none',
+                    }}
+                    >{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -112,16 +133,18 @@ export function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            TECHSHOP
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.label}
+                component={Link}
+                href={page.path}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.label}
               </Button>
             ))}
           </Box>
@@ -149,8 +172,22 @@ export function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.path} onClick={handleCloseUserMenu}>
+                  <Typography
+                   textAlign="center"
+                   component="a"
+                   href={setting.path}
+                   sx={{
+                     mr: 2,
+                     display: 'flex',
+                     flexGrow: 1,
+                     fontFamily: 'monospace',
+                     fontWeight: 700,
+                     letterSpacing: '.3rem',
+                     color: 'inherit',
+                     textDecoration: 'none',
+                   }}
+                   >{setting.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
