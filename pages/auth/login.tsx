@@ -33,7 +33,7 @@ const LoginPage = () => {
         }
         //navegar a pantalla en la que estaba el usuario
         // router.push('/');
-        router.replace('/productos');
+        router.replace('/auth/productos');
     } 
     return (
         <AuthLayout title={'Ingresar'}>
@@ -41,6 +41,7 @@ const LoginPage = () => {
                 <Box sx={{ width: 350, padding: '10px 20px'}}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
+           
                             <Typography variant='h3' component='h3'>Iniciar Sesión</Typography>
                             <Chip 
                                 label="No se reconoce usuario/contraseña"
