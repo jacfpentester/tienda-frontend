@@ -36,7 +36,7 @@ export const AuthProvider: FC<({ children: any })> = ({ children }) => {
             const { token, cliente } = data;
             console.log(cliente);
             Cookies.set('token', token);
-            Cookies.set('FullName', cliente.FullName);
+            // Cookies.set('FullName', cliente.FullName);
             dispatch({ type: '[Auth] - Login', payload: cliente });
             return true;
         } catch (error) { 
@@ -44,12 +44,12 @@ export const AuthProvider: FC<({ children: any })> = ({ children }) => {
         }
     }
 
-    const registerUser = async (Email: string, Password: string, FullName: string): Promise<IRespuestaApiAuth> => {
+    const registerUser = async (Email: string, Password: string): Promise<IRespuestaApiAuth> => {
         try {
-            const { data } = await api.post('/auth/register', { Email, FullName, Password })
+            const { data } = await api.post('/auth/register', { Email, Password })
             const { token, cliente } = data;
             Cookies.set('token', token);
-            Cookies.set('rol', cliente.roles[0]);
+            Cookies.set('Rol', cliente.roles[0]);
             dispatch({ type: '[Auth] - Login', payload: cliente });
             return {
                 hasError: false,

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import {  Email, ErrorOutline, ErrorSharp } from '@mui/icons-material';
 import { Box, Grid, Typography, TextField, Button, Link, Chip } from '@mui/material';
 
-import { AuthLayout } from '../../layouts';
+import { AuthLayout} from '../../layouts/AuthLayout';
 import { validations } from '../../utils';
 import { AuthContext } from '../../context/auth/AuthContext';
 import {api} from '../../api/';
@@ -39,7 +39,7 @@ const RegisterPage = () => {
      
     setShowError(false);
     console.log ("Enviando Datos")
-    const { Email, Password, FullName } = InputData;
+    const { Email, Password } = InputData;
     const {hasError, message } = await registerUser(Email, Password)
     console.log(message);
     if (hasError){
@@ -69,15 +69,8 @@ const RegisterPage = () => {
                                 sx={{ display: showError ? 'flex': 'none'}}
                             />
                 </Grid>
-                <Grid item xs={12}>
-                    <TextField 
-                        { ...register('FullName', {
-                            required: 'Nombre y Apellidos obligatorio'
-                        })}
-                        error= { !!errors.FullName}
-                        helperText = { errors.FullName?.message }
-                        label="Nombre y Apellidos" variant='filled' fullWidth />
-                </Grid>
+                
+                
                 <Grid item xs={12}>
                     <TextField 
                         { ...register('Email', {
