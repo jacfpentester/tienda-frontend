@@ -99,7 +99,7 @@ const RegisterPage = () => {
                 </Grid>
                 <Grid item xs={12} display='flex' justifyContent='end'>
                     <Link href='/auth/register' passHref component={NextLink} underline='always'>
-                        ¿ No tienes cuenta ... ?
+                        ¿ Crear cuenta ... ?
                     </Link>
                 </Grid>
             </Grid>

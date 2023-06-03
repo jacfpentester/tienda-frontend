@@ -15,13 +15,17 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 
 const pages = [
-  {label: 'PRODUCTOS', path: '/productos'},
-  {label: 'CONTACTAR',  path: '/contactar'},
+  {label: 'PRODUCTOS', path: '/admin/productos'},
+  {label: 'CATERORIAS', path: '/admin/categorias'},
+  {label: 'PROVEEDORES', path: '/admin/proveedores'},
+  {label: 'CARRITO', path: '/admin/carrito'},
+  {label: 'CONTACTAR',  path: '/admin/contactar'},
 ];
 
 const settings = [
-  {label: 'ACCEDER', path: '/auth/login'},
-  {label: 'REGISTRO',  path: '/auth/register'},
+  {label: 'Mi Perfil', path: '/auth/login'},
+  {label: 'Cambiar Password', path: '/auth/login'},
+  {label: 'Salir',  path: '/auth/register'},
 ];
 
 export function ResponsiveAppBar() {
@@ -152,7 +156,7 @@ export function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="avatar.png" />
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

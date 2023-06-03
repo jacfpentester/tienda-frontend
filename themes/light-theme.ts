@@ -269,7 +269,7 @@ export const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
+    fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif',
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
@@ -322,14 +322,14 @@ export const lightTheme = createTheme({
       lineHeight: 1.5,
     },
     body1: {
-      default: 'url("/public/fondoNetflix.jpg")',
+      default: 'url("/public/fondo.webp")',
       fontSize: '1rem',
       fontWeight: 400,
       letterSpacing: '0.00938em',
       lineHeight: 1.5,
     },
     body2: {
-      default: 'url("/public/fondoNetflix.jpg")',
+      default: 'url("/public/fondo.webp")',
       fontSize: '0.875rem',
       fontWeight: 400,
       letterSpacing: '0.01071em',

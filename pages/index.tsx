@@ -8,8 +8,7 @@ const IndexPage: NextPage = () => {
   return (
     <PublicLayouts>
       <h2>SECCIÓN HOME - Tienda</h2>
-      <img src="inicio.jpg" width="800"
-     height="800"></img>
+      <img src="inicio.jpg" width="800" height="800"></img>
     </PublicLayouts>
   )
 }

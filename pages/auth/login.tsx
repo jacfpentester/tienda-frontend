@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { ErrorOutline } from '@mui/icons-material';
 import { Box, Grid, Typography, TextField, Button, Link, Chip } from '@mui/material';
 import { AuthContext } from '../../context';
-import { AuthLayout } from '../../layouts';
+import { AuthLayout } from "../../layouts/index";
 import { validations } from '../../utils';
 interface IRespuestaLogin {
     token: string;
@@ -33,14 +33,14 @@ const LoginPage = () => {
         }
         //navegar a pantalla en la que estaba el usuario
         // router.push('/');
-        router.replace('/auth/productos');
+        router.replace('/admin/productos');
     } 
     return (
         <AuthLayout title={'Ingresar'}>
             <form onSubmit={ handleSubmit(onLoginUser) } noValidate>
                 <Box sx={{ width: 350, padding: '10px 20px'}}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        {/* <Grid item xs={12}>
            
                             <Typography variant='h3' component='h3'>Iniciar Sesión</Typography>
                             <Chip 
@@ -50,7 +50,7 @@ const LoginPage = () => {
                                 className="fadeIn"
                                 sx={{ display: showError ? 'flex': 'none'}}
                             />
-                        </Grid>
+    </Grid>*/}
                         <Grid item xs={12}>
                             <TextField 
                                 { ...register('Email', {
@@ -77,7 +77,7 @@ const LoginPage = () => {
                             />
                                     
                          
-                        </Grid>
+                        </Grid> 
                         <Grid item xs={12}>
                             <Button 
                                 type='submit'
@@ -87,7 +87,7 @@ const LoginPage = () => {
                         </Grid>
                         <Grid item xs={12} display='flex' justifyContent='end'>
                             <Link href='/auth/register' passHref component={NextLink} underline='always'>
-                                ¿ No tienes cuenta ... ?
+                                ¿ Crear cuenta ... ?
                             </Link>
                         </Grid>
                     </Grid>

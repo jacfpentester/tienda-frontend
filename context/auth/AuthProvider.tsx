@@ -29,6 +29,8 @@ export const AuthProvider: FC<({ children: any })> = ({ children }) => {
     }, []);
     const checkToken = async () => {
     }
+
+    
     const loginUser = async (Email: string, Password: string): Promise<boolean> => {
         try {
             const { data } = await api.post('/auth/login', { Email, Password });

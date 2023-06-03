@@ -4,7 +4,7 @@ import { Mundo } from "@/components/Mundo";
 import { MainLayouts } from "@/layouts/MainLayouts";
 
 //NextPage --> indica que es un proyecto Next y no Reac
-const IndexPage  = () => {
+const IndexProveedoresPage  = () => {
     const { proveedores, isLoading } = useProveedores('/proveedores');
     const respuesta = useProveedores('/proveedores');
     console.log(respuesta);
@@ -23,4 +23,4 @@ const IndexPage  = () => {
     )
 }
 
-export default IndexPage
+export default IndexProveedoresPage

@@ -1,8 +1,8 @@
-import { PublicLayouts } from "../../layouts/PublicLayouts"
+import { NextPage } from 'next';
 import { MainLayouts } from '../../layouts/MainLayouts';
 
  
-const IndexPage = () => {
+const indexPage: NextPage = () => {
   
 
   return (
@@ -12,4 +12,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default indexPage

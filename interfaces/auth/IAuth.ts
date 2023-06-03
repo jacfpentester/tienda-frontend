@@ -3,19 +3,20 @@ export interface IAuth {
     ID:        string;
     Email:     string;
     Web:       string;
-    isActive?: boolean;
+    IsActive?: boolean;
     token?:    string;
-    roles?:    string;
+    Roles?:    string;
     FullName:  string;
-    cliente:   IClientes
+    clienteID: string;
+    // cliente:   IClientes
 }
 
-export interface IClientes{
-    ID: string;
-    DNI: string;
-    Nombre: string;
-    Apellido1: string;
-    Apellido2: string;
-    Direccion: string;
-    Fecha_nacimiento: string;
-}
+// export interface IClientes{
+//     ID: string;
+//     DNI: string;
+//     Nombre: string;
+//     Apellido1: string;
+//     Apellido2: string;
+//     Direccion: string;
+//     Fecha_nacimiento: string;
+// }
