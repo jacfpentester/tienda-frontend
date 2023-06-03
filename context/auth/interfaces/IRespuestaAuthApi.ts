@@ -36,9 +36,9 @@ export interface IRespuestaLogin2 {
 export interface IUserApi {
     Email: string;
     Password: string;
-    FullName: string;
+    FullName?: string;
     IsActive?: boolean;
-    Roles: string[]
+    Roles?: string[]
 }
 export interface IRespuestaLogin {
     token: string;
