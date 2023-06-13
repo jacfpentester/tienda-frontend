@@ -18,9 +18,9 @@ const AUTH_INITIAL_STATE: AuthState = {
     cliente: undefined
 }
 
-interface Props {
-    children: any
-}
+// interface Props {
+//     children: any
+// }
 
 export const AuthProvider: FC<({ children: any })> = ({ children }) => {
     const [state, dispatch] = useReducer(authReducer, AUTH_INITIAL_STATE);
@@ -51,7 +51,7 @@ export const AuthProvider: FC<({ children: any })> = ({ children }) => {
             const { data } = await api.post('/auth/register', { Email, Password })
             const { token, cliente } = data;
             Cookies.set('token', token);
-            Cookies.set('Rol', cliente.roles[0]);
+            Cookies.set('Roles', cliente.Roles[0]);
             dispatch({ type: '[Auth] - Login', payload: cliente });
             return {
                 hasError: false,

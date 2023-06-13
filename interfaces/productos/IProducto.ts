@@ -6,17 +6,17 @@ export interface IProducto {
     categoriaID: string;
     proveedorID: string;
     Imagen?: string;
-    // categoria: ICategorias
-    // proveedores: IProveedores
+     categoria: ICategorias
+    proveedores: IProveedores
 }
-// export interface ICategorias {
-//     ID: string;
-//     Nombre: string;
-// }
-// export interface IProveedores {
-//     ID: string;
-//     NIF: string;
-//     Nombre: string;
-// }
+export interface ICategorias {
+    ID: string;
+    Nombre: string;
+}
+export interface IProveedores {
+    ID: string;
+    NIF: string;
+    Nombre: string;
+}
 
 

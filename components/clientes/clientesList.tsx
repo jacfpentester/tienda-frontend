@@ -40,7 +40,7 @@ export const ClientesList: FC<Props> = ({ clientes }) => {
                                 <TableCell align="right">{clientes.Direccion}</TableCell>
                                 <TableCell align="right">{clientes.Provincia}</TableCell>
                                 <TableCell align="right">{clientes.Telefono}</TableCell>
-                                <TableCell align="right">{clientes.Fecha_nacimiento}</TableCell>  
+                                {/* <TableCell align="right">{clientes.Fecha_nacimiento}</TableCell>   */}
                             </TableRow>
                         )
                     )}

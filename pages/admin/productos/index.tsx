@@ -11,11 +11,11 @@ const IndexProductosPage = () => {
     <MainLayouts>
       <h2>Sección de Productos</h2>
       <ProductosList producto = {productos} />
-            {
+            {/* {
                 (isLoading)
                     ? <ProductosList producto = {productos} />
                     : <Mundo />
-            }
+            } */}
         </MainLayouts>
   )
 }

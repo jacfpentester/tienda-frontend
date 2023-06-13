@@ -13,7 +13,7 @@ const ProductoPage = () => {
     console.log(ID)
   return (
     <PublicLayouts>
-        <h2>Detalle del Producto { ID.id}</h2>
+        <h2>Detalle del Producto {ID.Nombre}</h2>
     </PublicLayouts>
     
   )

@@ -7,53 +7,48 @@ import TabList from '@mui/lab/TabList';
 import { TabPanel } from '@mui/lab';
 import { IProducto } from '@/interfaces/productos/IProducto';
 import { AuthContext } from '../../context';
-import Image,{ImageLoader} from 'next/image';
+import Image, { ImageLoaderProps } from 'next/image';
 
 interface Props {
-    producto: IProducto
+  producto: IProducto
 }
 
-
-const myLoader:ImageLoader = ({src, width, quality}) =>{
-  return `${src}?s=${width}`
+const myLoader: ImageLoaderProps = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
 }
-export const ProductosDetails:FC<Props> = ({producto}) => {
-    
-    console.log(producto);
-    const [value, setValue] = React.useState('1');
 
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-      setValue(newValue);
-    };
-    const { user } =  useContext(AuthContext); 
-    
+export const ProductosDetails: FC<Props> = ({ producto }) => {
+
+  console.log(producto);
+  const [value, setValue] = React.useState('1');
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+  const { user } = useContext(AuthContext);
+
   return (
     <Grid container spacing={3} className='grid-background'>
-      <Grid item xs={12} sm={12} sx={{ border:0, width:'100%' }} >
+      <Grid item xs={12} sm={12} sx={{ border: 0, width: '100%' }} >
         <Box display='flex' flexDirection='row'  >
           <Image
-            //loader={myLoader}
-            src= {producto.Imagen}
+            loader={myLoader}
+            src={producto.Imagen}
             alt={producto.Nombre}
             width={300}
             height={300}
           />
-          <Box display='flex' flexDirection='column' sx={{  width: '40%', p:3}} >
+          <Box display='flex' flexDirection='column' sx={{ width: '40%', p: 3 }} >
             <Typography variant='h5' component='h5'
-                        sx={{ fontSize: '20px', textAlign: 'center', mb: '10px'}}
-            > { producto.Nombre}</Typography>
+              sx={{ fontSize: '20px', textAlign: 'center', mb: '10px' }}
+            > {producto.Nombre}</Typography>
             <Box display='flex' flexDirection='row' >
-              {/* <Typography sx={{width: '40%'}}  variant='subtitle1' > Identificador: </Typography> */}
-              <Typography sx={{width: '60%'}}> Identificador: {producto.ID} </Typography>
-              { user?.Email}            
+              <Typography sx={{ width: '60%' }}> Identificador: {producto.ID} </Typography>
+              {user?.Email}
             </Box>
-            {/* <Box display='flex' flexDirection='row'>
-              <Typography sx={{width: '40%'}}  variant='subtitle1' > Titulo </Typography>
-              <Typography sx={{width: '60%'}}> {pelicula.Titulo} </Typography>
-            </Box> */}
           </Box>
-          <Box  sx={{ display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center'}}>
-            <Typography variant='h4' component='h4'> Precio: { producto.Precio } € </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' }}>
+            <Typography variant='h4' component='h4'> Precio: {producto.Precio} € </Typography>
             <Button variant="contained" endIcon={<ShoppingCartIcon />}>
               Añadir al carrito
             </Button>
@@ -76,14 +71,7 @@ export const ProductosDetails:FC<Props> = ({producto}) => {
             <TabPanel value="3">{producto.categoria?.Nombre}</TabPanel>
           </TabContext>
         </Box>
-        {/* <Box sx={{ width: '100%' }}>
-              <Typography  variant='subtitle1' > Sinpsis </Typography>
-              <Typography> {libro.shortDescription} </Typography>
-        </Box> */}
-
-
       </Grid>
     </Grid>
-
   )
 }
