@@ -8,7 +8,7 @@ First, run thea development server  :
 npm run dev
 # or
 yarn dev
-# or
+# test or
 pnpm dev
 ```
 
