@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run thea development server  :
+First, run la lehe thea development server  :
 
 ```bash
 npm run dev
