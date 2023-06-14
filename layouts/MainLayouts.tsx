@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ResponsiveAppBar } from '../components/commons';
+import { ResponsiveAppBar } from '../components/commons/admin';
 
 interface Props {
     children: any;
